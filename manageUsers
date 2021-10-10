@@ -1,0 +1,19 @@
+from basic-log-management-.functions import *
+usuarios = {}
+opcao = EscolheOpcao()
+
+while opcao == "I" or opcao == "P" or opcao =="E" or opcao == "L":
+    if opcao == "I":
+        inserir(usuarios)
+    opcao = EscolheOpcao()
+
+    if opcao == "P":
+        chave = input("Digite o usuário que deseja pesquisar: ").upper()
+        pesquisar(usuarios, chave)
+
+    if opcao == "E":
+        chave = input("Digite o login a ser excluído: ").upper()
+        excluir(usuarios, chave)
+
+    if opcao == "L":
+        listar(usuarios)
